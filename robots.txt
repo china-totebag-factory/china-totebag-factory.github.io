@@ -1,0 +1,24 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://fashionbags-factory.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Disallow admin or private areas (if any)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow all product pages
+Allow: /products/
+Allow: /custom/
+Allow: /countries/
+Allow: /contact/
+Allow: /cart/
+
+# Allow all static assets
+Allow: /bag_imgs/
+Allow: /assets/
+Allow: /_nuxt/
