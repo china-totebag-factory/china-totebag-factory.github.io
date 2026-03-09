@@ -1,0 +1,1 @@
+import{d as a,k as n,n as l}from"#entry";import{c}from"./Co5tMnYY.js";const h=()=>{const s=a();n();const t=c(()=>{const e=s.query.to;return e==="A"||e==="B"?e:"default"}),o=e=>{const r=t.value;if(r==="default")return e;const u=e.includes("?")?"&":"?";return`${e}${u}to=${r}`};return{wholesalerKey:t,buildPath:o,navigateWithWholesaler:e=>l(o(e))}};export{h as u};

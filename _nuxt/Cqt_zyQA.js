@@ -1,0 +1,1 @@
+const s="18949404001",a="/Wechat.jpg",t="+8618949404001",_="https://wa.me/message/IGXLMP3BVWWRN1",A="/WhatsApp.png",W="https://fashionbags-factory.com",c={default:"+8618949404001",A:"+8618226154366",B:"+8618949528667"};export{t as M,c as W,W as a,_ as b,A as c,s as d,a as e};
