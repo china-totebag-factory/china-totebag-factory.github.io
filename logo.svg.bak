@@ -1,0 +1,22 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- lowercase flowing f: ends before circle so tail is only the circle, with smoother left sweep near bag bottom -->
+  <g id="f-lc-flow" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- main sweep: smoother, raised bottom-left to around bag bottom (~y=66); extend further left -->
+    <path d="M62 16 C55 6, 46 12, 44 24 S40 50, 34 62 S24 66, 18 66"/>
+    <!-- middle sweep (crossbar): curve upward, endpoints unchanged -->
+    <path d="M26 41 Q41 37, 56 41"/>
+    <!-- tail circle at the extended left end: thicker stroke -->
+    <circle cx="16" cy="66" r="3" fill="none" stroke="currentColor" stroke-width="2.2"/>
+  </g>
+
+  <!-- abstract bag moved to (50,52) -->
+  <g id="bag-abstract" transform="translate(50,52)" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M6 2 C6 0.8 7.2 0 9 0 C10.8 0 12 0.8 12 2"/>
+    <path d="M4 4 H14"/>
+    <path d="M6 5.8 Q9 7.6, 12 5.8"/>
+    <path d="M4 4 Q3.0 7.0, 2.6 10.8 C2.2 12.6 3.3 14 5.0 14 H13.0 C14.7 14 15.8 12.6 15.4 10.8 Q15.1 7.0, 14 4"/>
+    <path d="M4.8 10 Q4.8 11.8, 4.8 13.6"/>
+    <path d="M13.2 10 Q13.2 11.8, 13.2 13.6"/>
+    <circle cx="9" cy="12.2" r="0.8" fill="currentColor"/>
+  </g>
+</svg>

@@ -1,0 +1,482 @@
+/* 移动端浏览器兼容性优化样式 */
+
+/* 基础重置和优化 */
+* {
+  /* 移动端点击优化 */
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  
+  /* 移动端字体渲染优化 */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  
+  /* 移动端滚动优化 */
+  -webkit-overflow-scrolling: touch;
+}
+
+/* 移动端视口优化 */
+html {
+  /* 防止移动端缩放 */
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  
+  /* 移动端滚动优化 */
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+  
+  /* 移动端字体优化 */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  /* 移动端滚动优化 */
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+  
+  /* 移动端字体优化 */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  
+  /* 移动端触摸优化 */
+  touch-action: manipulation;
+  
+  /* 防止移动端选择文本 */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* 允许输入框和可编辑元素选择文本 */
+input, textarea, [contenteditable] {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
+/* 移动端图片优化 */
+img {
+  /* 防止图片被拖拽 */
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+  
+  /* 防止图片被选择 */
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  
+  /* 图片自适应 */
+  max-width: 100%;
+  height: auto;
+  
+  /* 图片加载优化 */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* 移动端按钮优化 */
+button, .btn, [role="button"] {
+  /* 移动端点击优化 */
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  
+  /* 防止按钮被选择 */
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  
+  /* 移动端触摸优化 */
+  touch-action: manipulation;
+  
+  /* 移动端外观重置 */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  
+  /* 移动端边框重置 */
+  border: none;
+  outline: none;
+  
+  /* 移动端背景重置 */
+  background: transparent;
+  
+  /* 移动端字体继承 */
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/* 移动端输入框优化 */
+input, textarea, select {
+  /* 移动端外观重置 */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  
+  /* 移动端边框重置 */
+  border-radius: 0;
+  
+  /* 移动端字体优化 */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  /* 移动端缩放优化 */
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* 移动端链接优化 */
+a {
+  /* 移动端点击优化 */
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  
+  /* 移动端触摸优化 */
+  touch-action: manipulation;
+  
+  /* 移动端颜色继承 */
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 移动端列表优化 */
+ul, ol {
+  /* 移动端列表样式重置 */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* 移动端表格优化 */
+table {
+  /* 移动端表格边框合并 */
+  border-collapse: collapse;
+  border-spacing: 0;
+  
+  /* 移动端表格宽度优化 */
+  width: 100%;
+  max-width: 100%;
+}
+
+/* 移动端表单优化 */
+form {
+  /* 移动端表单布局优化 */
+  display: block;
+  width: 100%;
+}
+
+/* 移动端容器优化 */
+.container {
+  /* 移动端容器宽度优化 */
+  width: 100%;
+  max-width: 100%;
+  
+  /* 移动端容器内边距优化 */
+  padding-left: 16px;
+  padding-right: 16px;
+  
+  /* 移动端容器居中 */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 移动端弹性布局优化 */
+.flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-col {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.flex-row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -moz-box-orient: horizontal;
+  -moz-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.justify-center {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.items-center {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+/* 移动端网格布局优化 */
+.grid {
+  display: -webkit-grid;
+  display: -ms-grid;
+  display: grid;
+}
+
+/* 移动端定位优化 */
+.fixed {
+  position: fixed;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.absolute {
+  position: absolute;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.relative {
+  position: relative;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+/* 移动端动画优化 */
+.animate {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  perspective: 1000;
+}
+
+/* 移动端过渡优化 */
+.transition {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* 移动端阴影优化 */
+.shadow {
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+/* 移动端边框优化 */
+.rounded {
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+
+/* 移动端渐变优化 */
+.gradient {
+  background: -webkit-linear-gradient(top, #ffffff, #f0f0f0);
+  background: -moz-linear-gradient(top, #ffffff, #f0f0f0);
+  background: -o-linear-gradient(top, #ffffff, #f0f0f0);
+  background: linear-gradient(to bottom, #ffffff, #f0f0f0);
+}
+
+/* 移动端文本省略优化 */
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.text-ellipsis-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.text-ellipsis-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 移动端视口单位支持 */
+.vh-100 {
+  height: 100vh;
+  height: -webkit-fill-available;
+}
+
+.vw-100 {
+  width: 100vw;
+  width: -webkit-fill-available;
+}
+
+/* 移动端滚动优化 */
+.scroll-smooth {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+.scroll-auto {
+  -webkit-overflow-scrolling: auto;
+  scroll-behavior: auto;
+}
+
+/* 移动端触摸优化 */
+.touch-manipulation {
+  touch-action: manipulation;
+}
+
+.touch-pan-x {
+  touch-action: pan-x;
+}
+
+.touch-pan-y {
+  touch-action: pan-y;
+}
+
+.touch-pinch-zoom {
+  touch-action: pinch-zoom;
+}
+
+.touch-none {
+  touch-action: none;
+}
+
+/* 移动端安全区域支持 */
+.safe-area-inset-top {
+  padding-top: env(safe-area-inset-top);
+}
+
+.safe-area-inset-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.safe-area-inset-left {
+  padding-left: env(safe-area-inset-left);
+}
+
+.safe-area-inset-right {
+  padding-right: env(safe-area-inset-right);
+}
+
+.safe-area-inset-all {
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
+/* 移动端媒体查询优化 */
+@media screen and (max-width: 768px) {
+  /* 移动端字体大小优化 */
+  html {
+    font-size: 14px;
+  }
+  
+  /* 移动端容器优化 */
+  .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  
+  /* 移动端按钮优化 */
+  button, .btn, [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* 移动端输入框优化 */
+  input, textarea, select {
+    min-height: 44px;
+    font-size: 16px; /* 防止iOS缩放 */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* 小屏幕移动端优化 */
+  html {
+    font-size: 13px;
+  }
+  
+  .container {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
+/* 移动端横屏优化 */
+@media screen and (orientation: landscape) and (max-height: 500px) {
+  /* 横屏模式下的特殊优化 */
+  .container {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}
+
+/* 移动端高DPI屏幕优化 */
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+  /* 高DPI屏幕下的图片优化 */
+  img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* 移动端深色模式优化 */
+@media (prefers-color-scheme: dark) {
+  /* 深色模式下的特殊优化 */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* 移动端减少动画优化 */
+@media (prefers-reduced-motion: reduce) {
+  /* 减少动画的用户偏好 */
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* 移动端打印优化 */
+@media print {
+  /* 打印时的优化 */
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}

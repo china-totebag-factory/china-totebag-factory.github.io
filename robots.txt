@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fashionbags-factory.com/sitemap.xml
+
+Crawl-delay: 1
+
+Allow: /products/
+Allow: /custom/
+Allow: /countries/
+Allow: /contact/
+Allow: /cart/
+Allow: /assets/
+Allow: /_nuxt/
